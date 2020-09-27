@@ -1,6 +1,6 @@
 # bitstobytes
 
-A new Flutter project.
+Official website for Bits to Bytes Programming Club of Government Engneering Collage Bhavnagar
 
 ## Getting Started
 
