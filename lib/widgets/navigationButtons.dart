@@ -52,7 +52,9 @@ class _NavigationButtonState extends State<NavigationButton> {
             InkWell(
               hoverColor: Colors.transparent,
               borderRadius: BorderRadius.circular(16),
-              onTap: () {},
+              onTap: () {
+                theme.changeTheme();
+              },
               child: Padding(
                 padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                 child: Text(

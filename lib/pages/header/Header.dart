@@ -17,16 +17,28 @@ class _HeaderState extends State<Header> {
           return Container();
         }
         return Container(
-          height: 65,
+          height: 75,
           width: context.width,
-          decoration: BoxDecoration(),
+          decoration: BoxDecoration(
+            color: Theme.of(context).primaryColor,
+            boxShadow: [
+              BoxShadow(
+                offset: Offset(0, 8),
+                blurRadius: 24,
+                color: Color(0xff000000).withOpacity(0.15),
+              )
+            ],
+          ),
           child: Stack(
             children: [
               Align(
                 alignment: Alignment.centerLeft,
-                child: Icon(
-                  Icons.account_circle,
-                  size: 45,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Image.asset(
+                    'assets/4.jpeg',
+                    scale: 3,
+                  ),
                 ),
               ),
               Align(
