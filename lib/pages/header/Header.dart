@@ -36,7 +36,7 @@ class _HeaderState extends State<Header> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 8.0),
                   child: Image.asset(
-                    'assets/4.jpeg',
+                    'assets/logo.jpeg',
                     scale: 3,
                   ),
                 ),
