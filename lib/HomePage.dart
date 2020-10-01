@@ -1,9 +1,8 @@
+import 'package:bitstobytes/components/body/Body.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import 'pages/body/Body.dart';
-import 'pages/footer/Footer.dart';
-import 'pages/header/Header.dart';
+import 'components/header/Header.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,14 +16,14 @@ class _HomePageState extends State<HomePage> {
       builder: (context, sizingInformation) {
         return Scaffold(
           backgroundColor: Theme.of(context).primaryColor,
-          body: Column(
+          body: Stack(
             children: [
+              Body(),
               Header(),
-             
             ],
           ),
           floatingActionButton: (sizingInformation.isMobile)
-              ? FloatingActionButton(onPressed: () {})
+              ? FloatingActionButton(onPressed: () {},child: Icon(Icons.menu),)
               : Container(),
         );
       },

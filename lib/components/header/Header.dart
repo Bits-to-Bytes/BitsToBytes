@@ -1,5 +1,6 @@
 import 'package:bitstobytes/widgets/navigationButtons.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:get/get.dart';
 
@@ -25,7 +26,7 @@ class _HeaderState extends State<Header> {
               BoxShadow(
                 offset: Offset(0, 8),
                 blurRadius: 24,
-                color: Color(0xff000000).withOpacity(0.15),
+                color: Color(0xff000000).withOpacity(0.10),
               )
             ],
           ),
@@ -34,10 +35,36 @@ class _HeaderState extends State<Header> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
-                  child: Image.asset(
-                    'assets/logo.jpeg',
-                    scale: 3,
+                  padding: const EdgeInsets.only(left: 48.0),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        'assets/logo.jpeg',
+                        scale: 3,
+                      ),
+                      SizedBox(width: 16,),
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Bits ',
+                              style: GoogleFonts.acme(
+                                  fontSize: 30, color: Colors.white),
+                            ),
+                            TextSpan(
+                              text: 'to ',
+                              style: GoogleFonts.acme(
+                                  fontSize: 30, color: Colors.white),
+                            ),
+                            TextSpan(
+                              text: 'Bytes',
+                              style: GoogleFonts.acme(
+                                  fontSize: 30, color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
                   ),
                 ),
               ),
@@ -48,9 +75,10 @@ class _HeaderState extends State<Header> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     NavigationButton(title: 'Home'),
+                    NavigationButton(title: 'Events'),
                     NavigationButton(title: 'Vision'),
                     NavigationButton(title: 'Team'),
-                    NavigationButton(title: 'Contact Us'),
+                    NavigationButton(title: 'Contact'),
                   ],
                 ),
               )
