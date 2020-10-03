@@ -1,6 +1,8 @@
 import 'package:bitstobytes/pages/EntryPage/EntryPage.dart';
-import 'package:bitstobytes/pages/events/evnetPage.dart';
-import 'package:draggable_scrollbar/draggable_scrollbar.dart';
+import 'package:bitstobytes/pages/OpportunityPage/OppertunityPage.dart';
+import 'package:bitstobytes/pages/eventPage/evnetPage.dart';
+import 'package:bitstobytes/pages/techPage/TechPage.dart';
+import 'package:bitstobytes/pages/visionPage/visionPage.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatefulWidget {
@@ -15,11 +17,15 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return Container(
       child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         controller: controller,
         child: Column(
           children: [
             EntryPage(),
             EventPage(),
+            VisionPage(),
+            OppertunityPage(),
+            TechPage(),
           ],
         ),
       ),
