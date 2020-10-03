@@ -24,7 +24,7 @@ final vision1 = Vision(
 
 final vision2 = Vision(
   icon: Icon(FlutterIcons.bulb1_ant, size: 45, color: Colors.green),
-  title: "Why DSC?",
+  title: "Why B2B?",
   info:
       "For students to learn development skills, solve problems through technology and inspire them to be world className developers and changemakers.",
 );

@@ -15,51 +15,53 @@ class _TechPageDeskState extends State<TechPageDesk> {
         minHeight: context.height,
         minWidth: context.width,
       ),
-      child: Column(
-        children: [
-          Text(
-            "Technologies We're Excited About",
-            style: Theme.of(context).textTheme.headline2,
-          ),
-          SizedBox(
-            height: 16.0,
-          ),
-          Text(
-            "Opportunities to learn & access deep technical content.",
-            style: theme.textTheme.headline3.copyWith(fontSize: 16),
-          ),
-          SizedBox(
-            height: 104.0,
-          ),
-          TechCard(
-            isOdd: true,
-            image: "assets/b2b3.png",
-            title: "Android Development",
-            info:
-                "Every year Google developers release exciting new updates to the world's most popular operating system. We always have sessions to keep you updated and mastering the latest trends in modern Android development.",
-          ),
-          TechCard(
-            isOdd: false,
-            image: "assets/b2b4.png",
-            title: "Web Development",
-            info:
-                "Learn the core foundations of a delightful web experience both for the user and developer. Stay up to tabs with emerging and trending technologies. Get access to a guided, tutorial and hands-on coding experience.",
-          ),
-          TechCard(
-            isOdd: true,
-            image: "assets/b2b5.png",
-            title: "Cloud Computing",
-            info:
-                "For passionate developers who want to stay relevant in a cloud first world where businesses demand for agility and innovation and prompt rise of cloud-native applications to ridges gaps between data, insight, and action.",
-          ),
-          TechCard(
-            isOdd: false,
-            image: "assets/b2b6.png",
-            title: "Machine Intelligence",
-            info:
-                "Learn how to drive user engagement and retention with intelligent apps that are able to effectively serve users what they need without the fuss by providing these systems with the ability to utomatically learn and improve from experience without being explicitly programmed.",
-          ),
-        ],
+      child: Expanded(
+        child: Column(
+          children: [
+            Text(
+              "Technologies We're Excited About",
+              style: Theme.of(context).textTheme.headline2,
+            ),
+            SizedBox(
+              height: 16.0,
+            ),
+            Text(
+              "Opportunities to learn & access deep technical content.",
+              style: theme.textTheme.headline3.copyWith(fontSize: 16),
+            ),
+            SizedBox(
+              height: 104.0,
+            ),
+            TechCard(
+              isOdd: true,
+              image: "assets/b2b3.png",
+              title: "Android Development",
+              info:
+                  "Every year Google developers release exciting new updates to the world's most popular operating system. We always have sessions to keep you updated and mastering the latest trends in modern Android development.",
+            ),
+            TechCard(
+              isOdd: false,
+              image: "assets/b2b4.png",
+              title: "Web Development",
+              info:
+                  "Learn the core foundations of a delightful web experience both for the user and developer. Stay up to tabs with emerging and trending technologies. Get access to a guided, tutorial and hands-on coding experience.",
+            ),
+            TechCard(
+              isOdd: true,
+              image: "assets/b2b5.png",
+              title: "Cloud Computing",
+              info:
+                  "For passionate developers who want to stay relevant in a cloud first world where businesses demand for agility and innovation and prompt rise of cloud-native applications to ridges gaps between data, insight, and action.",
+            ),
+            TechCard(
+              isOdd: false,
+              image: "assets/b2b6.png",
+              title: "Machine Intelligence",
+              info:
+                  "Learn how to drive user engagement and retention with intelligent apps that are able to effectively serve users what they need without the fuss by providing these systems with the ability to utomatically learn and improve from experience without being explicitly programmed.",
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -90,7 +92,7 @@ class _TechCardState extends State<TechCard> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final size = MediaQuery.of(context).size;
-    return Padding(
+        return Padding(
       padding: const EdgeInsets.symmetric(vertical: 110, horizontal: 40.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
