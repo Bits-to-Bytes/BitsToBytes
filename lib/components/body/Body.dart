@@ -1,5 +1,6 @@
 import 'package:bitstobytes/pages/EntryPage/EntryPage.dart';
 import 'package:bitstobytes/pages/OpportunityPage/OppertunityPage.dart';
+import 'package:bitstobytes/pages/TeamPage/TeamPage.dart';
 import 'package:bitstobytes/pages/eventPage/evnetPage.dart';
 import 'package:bitstobytes/pages/techPage/TechPage.dart';
 import 'package:bitstobytes/pages/visionPage/visionPage.dart';
@@ -21,6 +22,7 @@ class _BodyState extends State<Body> {
         controller: controller,
         child: Column(
           children: [
+            TeamPage(),
             EntryPage(),
             EventPage(),
             VisionPage(),
