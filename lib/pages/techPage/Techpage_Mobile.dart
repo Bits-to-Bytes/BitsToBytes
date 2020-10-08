@@ -132,7 +132,7 @@ class _TechCardState extends State<TechCard> {
               elevation: 10,
               onPressed: () {},
               child: Row(
-                children: [Text("CodeLabs"), Icon(Icons.star)],
+                children: [Text("CodeLabs"), Icon(Icons.arrow_forward)],
               ),
             ),
           ),

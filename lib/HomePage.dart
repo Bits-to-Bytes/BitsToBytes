@@ -1,4 +1,6 @@
 import 'package:bitstobytes/components/body/Body.dart';
+import 'package:bitstobytes/widgets/FloatingActionButton.dart';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -22,9 +24,8 @@ class _HomePageState extends State<HomePage> {
               Header(),
             ],
           ),
-          floatingActionButton: (sizingInformation.isMobile)
-              ? FloatingActionButton(onPressed: () {},child: Icon(Icons.menu),)
-              : Container(),
+          floatingActionButton:
+              (sizingInformation.isMobile) ? CustomFAB() : Container(),
         );
       },
     );

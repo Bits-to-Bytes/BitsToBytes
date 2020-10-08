@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
 class TeamPageDesk extends StatefulWidget {
   @override
@@ -11,7 +12,6 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final size = MediaQuery.of(context).size;
     return Container(
       constraints: BoxConstraints(
         minHeight: context.height,
@@ -43,19 +43,24 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
               Wrap(
                 children: [
                   ProfileCard(
-                    firstName: 'Miten',
-                    lastName: 'Gajjar',
-                    title: "Developer",
+                    firstName: 'Vedant',
+                    lastName: 'Jotangiya',
+                    title: "Management lead",
+                    linkedIn: "http://www.linkedin.com/in/vedantjot",
+                    github: "http://github.com/vedantjot",
+                    profile: "assets/team/vedant.jpeg",
                   ),
                   ProfileCard(
                     firstName: 'Miten',
                     lastName: 'Gajjar',
                     title: "Developer",
+                    profile: "assets/b2b3.png",
                   ),
                   ProfileCard(
                     firstName: 'Miten',
                     lastName: 'Gajjar',
                     title: "Developer",
+                    profile: "assets/b2b3.png",
                   ),
                 ],
               ),
@@ -68,16 +73,19 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                     firstName: 'Miten',
                     lastName: 'Gajjar',
                     title: "Developer",
+                    profile: "assets/b2b3.png",
                   ),
                   ProfileCard(
                     firstName: 'Miten',
                     lastName: 'Gajjar',
                     title: "Developer",
+                    profile: "assets/b2b3.png",
                   ),
                   ProfileCard(
                     firstName: 'Miten',
                     lastName: 'Gajjar',
                     title: "Developer",
+                    profile: "assets/b2b3.png",
                   ),
                 ],
               ),
@@ -122,7 +130,7 @@ class _ProfileCardState extends State<ProfileCard> {
     return MouseRegion(
       onEnter: (event) {
         setState(() {
-          width = 180;
+          width = 230;
           textColor = Colors.white;
         });
       },
@@ -134,17 +142,17 @@ class _ProfileCardState extends State<ProfileCard> {
       },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20),
-        height: 280,
+        height: 480,
         width: 300,
         child: Stack(
-          alignment: Alignment.centerRight,
+          alignment: Alignment.center,
           children: [
             Stack(
-              alignment: Alignment(-1, 0.8),
+              alignment: Alignment.center,
               children: [
                 Container(
-                  height: 250,
-                  width: 180,
+                  height: 350,
+                  width: 230,
                   decoration: BoxDecoration(
                     color: Theme.of(context).primaryColor,
                     borderRadius: BorderRadius.circular(12),
@@ -158,18 +166,71 @@ class _ProfileCardState extends State<ProfileCard> {
                     ],
                   ),
                 ),
-                AnimatedContainer(
-                  duration: Duration(milliseconds: 300),
-                  height: 250,
-                  width: width,
-                  decoration: BoxDecoration(
-                    color: theme.accentColor,
-                    borderRadius: BorderRadius.circular(10),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: AnimatedContainer(
+                    margin: const EdgeInsets.only(left: 35.0),
+                    duration: Duration(milliseconds: 300),
+                    height: 350,
+                    width: width,
+                    decoration: BoxDecoration(
+                      color: theme.accentColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 28.0),
-                  child: Text.rich(
+              ],
+            ),
+            Align(
+              alignment: Alignment(-0.9, -0.7),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 180,
+                        width: 220,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0),
+                          image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: Image.asset(widget.profile).image,
+                          ),
+                        ),
+                      ),
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: 75,
+                          ),
+                          IconButton(
+                              icon: Icon(
+                                FlutterIcons.github_alt_faw,
+                                color: textColor,
+                              ),
+                              onPressed: () {
+                                url_launcher.launch(widget.github);
+                              }),
+                          IconButton(
+                            icon: Icon(
+                              FlutterIcons.linkedin_box_mco,
+                              color: textColor,
+                            ),
+                            onPressed: () {
+                              url_launcher.launch(widget.linkedIn);
+                            },
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Text.rich(
                     TextSpan(children: [
                       TextSpan(text: widget.firstName + "\n"),
                       TextSpan(text: widget.lastName + "\n"),
@@ -185,41 +246,6 @@ class _ProfileCardState extends State<ProfileCard> {
                       color: textColor,
                     ),
                   ),
-                ),
-              ],
-            ),
-            Align(
-              alignment: Alignment(-0.9, -0.7),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    height: 180,
-                    width: 220,
-                    child: Image.asset("assets/b2b3.png"),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Column(
-                    children: [
-                      SizedBox(
-                        height: 75,
-                      ),
-                      IconButton(
-                          icon: Icon(
-                            FlutterIcons.github_alt_faw,
-                            color: textColor,
-                          ),
-                          onPressed: () {}),
-                      IconButton(
-                          icon: Icon(
-                            FlutterIcons.linkedin_box_mco,
-                            color: textColor,
-                          ),
-                          onPressed: () {}),
-                    ],
-                  )
                 ],
               ),
             ),
