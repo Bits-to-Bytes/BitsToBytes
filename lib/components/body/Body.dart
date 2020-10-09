@@ -5,8 +5,10 @@ import 'package:bitstobytes/pages/contactPage/ContactPage.dart';
 import 'package:bitstobytes/pages/eventPage/evnetPage.dart';
 import 'package:bitstobytes/pages/techPage/TechPage.dart';
 import 'package:bitstobytes/pages/visionPage/visionPage.dart';
+import 'package:bitstobytes/providers/ScrollProvider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -14,17 +16,16 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-  final ScrollController controller = ScrollController();
-
   @override
   Widget build(BuildContext context) {
+    final scroll = Provider.of<ScrollProvider>(context);
     return Container(
       child: CupertinoScrollbar(
         thickness: 5,
-        controller: controller,
+        controller: scroll.controller,
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          controller: controller,
+          controller: scroll.controller,
           child: Column(
             children: [
               EntryPage(),

@@ -1,5 +1,6 @@
 import 'package:bitstobytes/HomePage.dart';
 import 'package:bitstobytes/helpers/theme.dart';
+import 'package:bitstobytes/providers/ScrollProvider.dart';
 import 'package:bitstobytes/providers/ThemeProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -11,7 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(
+          create: (_) => ThemeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ScrollProvider(),
+        ),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, theme, child) => MaterialApp(

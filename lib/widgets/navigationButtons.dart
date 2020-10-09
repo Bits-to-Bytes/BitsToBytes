@@ -1,11 +1,12 @@
-import 'package:bitstobytes/providers/ThemeProvider.dart';
+import 'package:bitstobytes/providers/ScrollProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class NavigationButton extends StatefulWidget {
   final String title;
-  NavigationButton({this.title});
+  final int page;
+  NavigationButton({this.title, this.page});
 
   @override
   _NavigationButtonState createState() => _NavigationButtonState();
@@ -25,7 +26,8 @@ class _NavigationButtonState extends State<NavigationButton> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Provider.of<ThemeProvider>(context);
+    final scroll = Provider.of<ScrollProvider>(context);
+    final theme = Theme.of(context);
     return Padding(
       padding: const EdgeInsets.only(right: 24),
       child: MouseRegion(
@@ -36,7 +38,7 @@ class _NavigationButtonState extends State<NavigationButton> {
               GoogleFonts.sourceCodePro(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: theme.currentTheme.accentColor,
+                color: theme.accentColor,
               ),
             ).width;
           });
@@ -53,13 +55,13 @@ class _NavigationButtonState extends State<NavigationButton> {
               hoverColor: Colors.transparent,
               borderRadius: BorderRadius.circular(16),
               onTap: () {
-                theme.changeTheme();
+                scroll.animateTo(widget.page);
               },
               child: Padding(
                 padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                 child: Text(
                   widget.title,
-                  style: theme.currentTheme.appBarTheme.textTheme.headline1,
+                  style: theme.appBarTheme.textTheme.headline1,
                 ),
               ),
             ),
@@ -71,7 +73,7 @@ class _NavigationButtonState extends State<NavigationButton> {
               curve: Curves.easeOutQuad,
               height: 2,
               width: width,
-              color: theme.currentTheme.accentColor,
+              color: theme.accentColor,
             )
           ],
         ),

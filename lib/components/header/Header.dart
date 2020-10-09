@@ -39,10 +39,12 @@ class _HeaderState extends State<Header> {
                   child: Row(
                     children: [
                       Image.asset(
-                        'assets/logo.jpeg',
-                        scale: 3,
+                        'assets/logo.png',
+                        scale: 1,
                       ),
-                      SizedBox(width: 16,),
+                      SizedBox(
+                        width: 16,
+                      ),
                       RichText(
                         text: TextSpan(
                           children: [
@@ -74,11 +76,26 @@ class _HeaderState extends State<Header> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    NavigationButton(title: 'Home'),
-                    NavigationButton(title: 'Events'),
-                    NavigationButton(title: 'Vision'),
-                    NavigationButton(title: 'Team'),
-                    NavigationButton(title: 'Contact'),
+                    NavigationButton(
+                      title: 'Home',
+                      page: 1,
+                    ),
+                    NavigationButton(
+                      title: 'Events',
+                      page: 2,
+                    ),
+                    NavigationButton(
+                      title: 'Vision',
+                      page: 3,
+                    ),
+                    NavigationButton(
+                      title: 'Team',
+                      page: 4,
+                    ),
+                    NavigationButton(
+                      title: 'Contact',
+                      page: 5,
+                    ),
                   ],
                 ),
               )

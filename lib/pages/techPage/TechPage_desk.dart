@@ -91,7 +91,7 @@ class _TechCardState extends State<TechCard> {
     final theme = Theme.of(context);
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 110, horizontal: 40.0),
+      padding: const EdgeInsets.symmetric(vertical: 110, horizontal: 0.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[

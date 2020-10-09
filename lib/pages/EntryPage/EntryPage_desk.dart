@@ -1,4 +1,4 @@
-import 'package:bitstobytes/providers/ThemeProvider.dart';
+import 'package:bitstobytes/providers/ScrollProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -14,8 +14,10 @@ class _EntryPageDesktopState extends State<EntryPageDesktop> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Provider.of<ThemeProvider>(context);
+    final theme = Theme.of(context);
+    final scroll = Provider.of<ScrollProvider>(context);
     return Container(
+      key: scroll.keys[0],
       constraints: BoxConstraints(
         minHeight: context.height,
       ),
@@ -37,9 +39,9 @@ class _EntryPageDesktopState extends State<EntryPageDesktop> {
                       TextSpan(text: "Bits To Bytes\n"),
                       TextSpan(
                           text: "GEC Bhavnagar",
-                          style: theme.currentTheme.textTheme.headline2),
+                          style: theme.textTheme.headline2),
                     ],
-                    style: theme.currentTheme.textTheme.headline1,
+                    style: theme.textTheme.headline1,
                   ),
                 ),
                 SizedBox(
@@ -47,7 +49,7 @@ class _EntryPageDesktopState extends State<EntryPageDesktop> {
                 ),
                 Text(
                   info,
-                  style: theme.currentTheme.textTheme.headline3,
+                  style: theme.textTheme.headline3,
                 ),
                 SizedBox(
                   height: 48,
@@ -68,11 +70,11 @@ class _EntryPageDesktopState extends State<EntryPageDesktop> {
                       ),
                       Text(
                         "Became a member",
-                        style: theme.currentTheme.textTheme.headline6,
+                        style: theme.textTheme.headline6,
                       ),
                     ],
                   ),
-                  color: theme.currentTheme.accentColor,
+                  color: theme.accentColor,
                 )
               ],
             ),

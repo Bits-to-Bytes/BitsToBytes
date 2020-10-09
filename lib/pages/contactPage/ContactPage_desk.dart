@@ -1,10 +1,10 @@
-
+import 'package:bitstobytes/providers/ScrollProvider.dart';
 import 'package:bitstobytes/widgets/Buttons/SocialButton.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:get/get.dart';
-
+import 'package:provider/provider.dart';
 
 class ContactPageDesk extends StatefulWidget {
   @override
@@ -14,8 +14,10 @@ class ContactPageDesk extends StatefulWidget {
 class _ContactPageDeskState extends State<ContactPageDesk> {
   @override
   Widget build(BuildContext context) {
+    final scroll = Provider.of<ScrollProvider>(context);
     final theme = Theme.of(context);
     return Container(
+      key: scroll.keys[4],
       constraints: BoxConstraints(minWidth: context.width, minHeight: 350),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +78,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
                 ),
               ),
               SocialButton(
-                title: "twitter",
+                title: "Twitter",
                 colors: [
                   Color(0xff00c6ff),
                   Color(0xff0072ff),

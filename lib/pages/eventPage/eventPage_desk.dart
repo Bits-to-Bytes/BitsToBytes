@@ -1,5 +1,7 @@
+import 'package:bitstobytes/providers/ScrollProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 
 class EventPageDesktop extends StatefulWidget {
   @override
@@ -9,7 +11,9 @@ class EventPageDesktop extends StatefulWidget {
 class _EventPageDesktopState extends State<EventPageDesktop> {
   @override
   Widget build(BuildContext context) {
+    final scroll = Provider.of<ScrollProvider>(context);
     return Container(
+      key: scroll.keys[1],
       constraints: BoxConstraints(
         minHeight: context.height,
         minWidth: context.width,
