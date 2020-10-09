@@ -42,6 +42,7 @@ class _CustomFABState extends State<CustomFAB>
       backGroundColor: theme.accentColor,
       items: <Bubble>[
         Bubble(
+
           title: "Contact",
           iconColor: Colors.white,
           bubbleColor: theme.accentColor,
@@ -52,7 +53,7 @@ class _CustomFABState extends State<CustomFAB>
           },
         ),
         Bubble(
-          title: "Team",
+          title: "Team   ",
           iconColor: Colors.white,
           bubbleColor: theme.accentColor,
           icon: FlutterIcons.users_fea,
@@ -62,7 +63,7 @@ class _CustomFABState extends State<CustomFAB>
           },
         ),
         Bubble(
-          title: "Events",
+          title: "Events ",
           iconColor: Colors.white,
           bubbleColor: theme.accentColor,
           icon: FlutterIcons.event_mdi,
@@ -72,7 +73,7 @@ class _CustomFABState extends State<CustomFAB>
           },
         ),
         Bubble(
-          title: "Home",
+          title: "Home   ",
           iconColor: Colors.white,
           bubbleColor: theme.accentColor,
           icon: Icons.home,
