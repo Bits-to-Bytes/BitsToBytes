@@ -90,7 +90,7 @@ class _TechCardState extends State<TechCard> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final size = MediaQuery.of(context).size;
-        return Padding(
+    return Padding(
       padding: const EdgeInsets.symmetric(vertical: 110, horizontal: 40.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -137,7 +137,7 @@ class _TechCardState extends State<TechCard> {
               elevation: 10,
               onPressed: () {},
               child: Row(
-                children: [Text("CodeLabs"), Icon(Icons.star)],
+                children: [Text("CodeLabs"), Icon(Icons.arrow_forward)],
               ),
             ),
           ),

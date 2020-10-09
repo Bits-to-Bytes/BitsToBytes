@@ -71,7 +71,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
                   // Color(0xff91EAE4),
                 ],
                 icon: Icon(
-                  FlutterIcons.facebook_box_mco,
+                  FlutterIcons.linkedin_box_mco,
                   color: Colors.white,
                 ),
               ),

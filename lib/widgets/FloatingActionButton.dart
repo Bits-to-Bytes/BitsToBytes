@@ -1,5 +1,6 @@
 import 'package:floating_action_bubble/floating_action_bubble.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 class CustomFAB extends StatefulWidget {
   @override
@@ -39,35 +40,41 @@ class _CustomFABState extends State<CustomFAB>
     return FloatingActionBubble(
       animatedIconData: AnimatedIcons.menu_close,
       backGroundColor: theme.accentColor,
-      // Menu items
       items: <Bubble>[
-        // Floating action menu item
         Bubble(
-          title: "Settings",
+          title: "Contact",
           iconColor: Colors.white,
-          bubbleColor: Colors.blue,
-          icon: Icons.settings,
+          bubbleColor: theme.accentColor,
+          icon: FlutterIcons.md_contact_ion,
           titleStyle: TextStyle(fontSize: 16, color: Colors.white),
           onPress: () {
             _animationController.reverse();
           },
         ),
-        // Floating action menu item
         Bubble(
-          title: "Profile",
+          title: "Team",
           iconColor: Colors.white,
-          bubbleColor: Colors.blue,
-          icon: Icons.people,
+          bubbleColor: theme.accentColor,
+          icon: FlutterIcons.users_fea,
           titleStyle: TextStyle(fontSize: 16, color: Colors.white),
           onPress: () {
             _animationController.reverse();
           },
         ),
-        //Floating action menu item
+        Bubble(
+          title: "Events",
+          iconColor: Colors.white,
+          bubbleColor: theme.accentColor,
+          icon: FlutterIcons.event_mdi,
+          titleStyle: TextStyle(fontSize: 16, color: Colors.white),
+          onPress: () {
+            _animationController.reverse();
+          },
+        ),
         Bubble(
           title: "Home",
           iconColor: Colors.white,
-          bubbleColor: Colors.blue,
+          bubbleColor: theme.accentColor,
           icon: Icons.home,
           titleStyle: TextStyle(fontSize: 16, color: Colors.white),
           onPress: () {
@@ -75,11 +82,7 @@ class _CustomFABState extends State<CustomFAB>
           },
         ),
       ],
-
-      // animation controller
       animation: _animation,
-
-      // On pressed change animation state
       onPress: () {
         setState(() {
           if (isTrue) {
@@ -91,12 +94,7 @@ class _CustomFABState extends State<CustomFAB>
           }
         });
       },
-
-      // Floating Action button Icon color
-      iconColor: Colors.blue,
-
-      // Flaoting Action button Icon
-      // icon: AnimatedIcons.add_event,
+      iconColor: Colors.white,
     );
   }
 }

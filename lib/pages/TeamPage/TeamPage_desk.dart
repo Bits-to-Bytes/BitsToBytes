@@ -45,16 +45,18 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                   ProfileCard(
                     firstName: 'Vedant',
                     lastName: 'Jotangiya',
-                    title: "Management lead",
+                    title: "Management Lead",
                     linkedIn: "http://www.linkedin.com/in/vedantjot",
                     github: "http://github.com/vedantjot",
                     profile: "assets/team/vedant.jpeg",
                   ),
                   ProfileCard(
-                    firstName: 'Miten',
-                    lastName: 'Gajjar',
-                    title: "Developer",
-                    profile: "assets/b2b3.png",
+                    firstName: 'Neel',
+                    lastName: 'Gorasiya',
+                    title: "Technical Lead",
+                    profile: "assets/team/neel.jpeg",
+                    linkedIn: "https://www.linkedin.com/in/gorasiyaneel",
+                    github: "https://github.com/Neel2904",
                   ),
                   ProfileCard(
                     firstName: 'Miten',

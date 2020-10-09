@@ -12,15 +12,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  double padding = 75.0;
+
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
+        if (sizingInformation.isMobile) {
+          padding = 0;
+        } else {
+          padding = 75.0;
+        }
+
         return Scaffold(
           backgroundColor: Theme.of(context).primaryColor,
           body: Stack(
             children: [
-              Body(),
+              Padding(
+                padding: EdgeInsets.only(top: padding),
+                child: Body(),
+              ),
               Header(),
             ],
           ),
