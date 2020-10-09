@@ -13,20 +13,14 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (_) => ThemeProvider(),
-        ),
-        ChangeNotifierProvider(
           create: (_) => ScrollProvider(),
         ),
       ],
-      child: Consumer<ThemeProvider>(
-        builder: (context, theme, child) => MaterialApp(
-          theme: theme.currentTheme,
-          darkTheme: darkTheme,
-          debugShowCheckedModeBanner: false,
-          title: 'Bits to Bytes',
-          home: HomePage(),
-        ),
+      child: MaterialApp(
+        theme: lightTheme,
+        debugShowCheckedModeBanner: false,
+        title: 'Bits to Bytes',
+        home: HomePage(),
       ),
     );
   }

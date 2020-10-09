@@ -33,6 +33,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
             alignment: WrapAlignment.center,
             children: [
               SocialButton(
+                link: "https://github.com/Bits-to-Bytes",
                 title: "GitHub",
                 colors: [
                   Color(0xff2b5876),
@@ -45,6 +46,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
               ),
               SocialButton(
                 title: "Facebook",
+                link: "https://www.facebook.com/bitstobytes.gecbhavnagar.9",
                 colors: [
                   Color(0xff00d2ff),
                   Color(0xff3a7bd5),
@@ -55,6 +57,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
                 ),
               ),
               SocialButton(
+                link: "https://www.instagram.com/bits.to.bytes/",
                 title: "Instagrame",
                 colors: [
                   Color(0xffB24592),
@@ -66,6 +69,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
                 ),
               ),
               SocialButton(
+                link: "",
                 title: "LinkedIn",
                 colors: [
                   Color(0xff7F7FD5),
@@ -78,6 +82,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
                 ),
               ),
               SocialButton(
+                link: "https://twitter.com/BitstobytesGec",
                 title: "Twitter",
                 colors: [
                   Color(0xff00c6ff),
@@ -91,6 +96,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
             ],
           ),
           SocialButton(
+            link: "https://bitstobytesworkspace.slack.com",
             title: "Slack",
             icon: Icon(
               FlutterIcons.slack_faw5d,

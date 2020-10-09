@@ -17,7 +17,7 @@ class _TeamPageState extends State<TeamPage> {
     return ScreenTypeLayout(
       desktop: TeamPageDesk(),
       tablet: TeamPageDesk(),
-      mobile: TeamPageDesk(),
+      mobile: TeamPageMobile(),
     );
   }
 }

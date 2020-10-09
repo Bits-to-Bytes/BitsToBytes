@@ -14,7 +14,7 @@ class _EntrypageMobileState extends State<EntrypageMobile> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Provider.of<ThemeProvider>(context);
+    final theme = Theme.of(context);
     return Container(
       constraints: BoxConstraints(
         minHeight: context.height,
@@ -30,10 +30,10 @@ class _EntrypageMobileState extends State<EntrypageMobile> {
                 TextSpan(text: "Bits To Bytes\n"),
                 TextSpan(
                   text: "GEC Bhavnagar",
-                  style: theme.currentTheme.textTheme.headline2,
+                  style: theme.textTheme.headline2,
                 ),
               ],
-              style: theme.currentTheme.textTheme.headline1,
+              style: theme.textTheme.headline1,
             ),
             textAlign: TextAlign.center,
           ),
@@ -42,7 +42,7 @@ class _EntrypageMobileState extends State<EntrypageMobile> {
           ),
           Text(
             info,
-            style: theme.currentTheme.textTheme.headline3.copyWith(
+            style: theme.textTheme.headline3.copyWith(
               fontSize: 20,
             ),
           ),
@@ -65,11 +65,11 @@ class _EntrypageMobileState extends State<EntrypageMobile> {
                 ),
                 Text(
                   "Became a member",
-                  style: theme.currentTheme.textTheme.headline6,
+                  style: theme.textTheme.headline6,
                 ),
               ],
             ),
-            color: theme.currentTheme.accentColor,
+            color: theme.accentColor,
           ),
           SizedBox(
             height: 32,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart' as url;
 
 class SocialButton extends StatefulWidget {
   final Icon icon;
@@ -30,40 +31,45 @@ class _SocialButtonState extends State<SocialButton> {
             blureRadius = 12;
           });
         },
-        child: Container(
-          alignment: Alignment.center,
-          height: 35,
-          width: 130,
-          decoration: BoxDecoration(
-            // color: Color(0xff23282D),
-            gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: widget.colors,
+        child: InkWell(
+          onTap: (){
+            url.launch(widget.link);
+          },
+          child: Container(
+            alignment: Alignment.center,
+            height: 35,
+            width: 130,
+            decoration: BoxDecoration(
+              // color: Color(0xff23282D),
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: widget.colors,
+              ),
+              borderRadius: BorderRadius.circular(5),
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(0, 10),
+                  blurRadius: blureRadius,
+                  color: Colors.black.withOpacity(0.25),
+                )
+              ],
             ),
-            borderRadius: BorderRadius.circular(5),
-            boxShadow: [
-              BoxShadow(
-                offset: Offset(0, 10),
-                blurRadius: blureRadius,
-                color: Colors.black.withOpacity(0.25),
-              )
-            ],
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                widget.title,
-                style: TextStyle(
-                  color: Colors.white,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  widget.title,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              widget.icon,
-            ],
+                SizedBox(
+                  width: 10,
+                ),
+                widget.icon,
+              ],
+            ),
           ),
         ),
       ),

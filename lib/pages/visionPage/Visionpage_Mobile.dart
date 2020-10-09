@@ -18,7 +18,11 @@ class _VisionPageMobileState extends State<VisionPageMobile> {
         minWidth: context.width,
       ),
       child: Column(
-        children: visions.map((vision) => VisionCardMobile(vision: vision)).toList(),
+        children: [
+          VisionCardMobile(vision: visions[0]),
+          VisionCardMobile(vision: visions[1]),
+          VisionCardMobile(vision: visions[2]),
+        ],
       ),
     );
   }

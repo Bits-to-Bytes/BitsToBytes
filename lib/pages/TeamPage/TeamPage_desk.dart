@@ -1,5 +1,5 @@
 import 'package:bitstobytes/providers/ScrollProvider.dart';
-import 'package:bitstobytes/widgets/teampage/profileCard.dart';
+import 'package:bitstobytes/widgets/teampage/profileCardDesk.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -45,7 +45,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
             children: [
               Wrap(
                 children: [
-                  ProfileCard(
+                  ProfileCardDesk(
                     firstName: 'Vedant',
                     lastName: 'Jotangiya',
                     title: "Management Lead",
@@ -55,7 +55,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                     twitter: "http://twitter.com/vedantjot",
                     instagrame: "http://www.instagram.com/vedantjot",
                   ),
-                  ProfileCard(
+                  ProfileCardDesk(
                     firstName: 'Neel',
                     lastName: 'Gorasiya',
                     title: "Technical Lead",
@@ -65,7 +65,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                     instagrame: "https://instagram.com/neelg_2904",
                     twitter: "https://twitter.com/Neel_2904",
                   ),
-                  ProfileCard(
+                  ProfileCardDesk(
                     firstName: 'Ishita',
                     lastName: 'Keshawani',
                     title: "Executive Member",
@@ -82,7 +82,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
               ),
               Wrap(
                 children: [
-                  ProfileCard(
+                  ProfileCardDesk(
                     firstName: 'Miten',
                     lastName: 'Gajjar',
                     title: "Executive Member",
@@ -92,7 +92,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                     github: "https://github.com/GajjarMiten",
                     profile: "assets/team/miten.jpeg",
                   ),
-                  ProfileCard(
+                  ProfileCardDesk(
                     firstName: 'Aum',
                     lastName: 'Joshi',
                     title: "Executive Member",
@@ -102,11 +102,11 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                     twitter: "https://twitter.com/aumjoshii",
                     instagrame: "https://www.instagram.com/aumjoshii_",
                   ),
-                  ProfileCard(
+                  ProfileCardDesk(
                     firstName: 'Yashvi',
                     lastName: 'Patel',
                     title: "Executive Member",
-                    profile: "assets/b2b3.png",
+                    profile: "assets/team/yashvi.jpeg",
                     linkedIn: "https://github.com/patelyashvi",
                     github: "https://github.com/patelyashvi",
                     twitter: "https://twitter.com/YashviP97470687",

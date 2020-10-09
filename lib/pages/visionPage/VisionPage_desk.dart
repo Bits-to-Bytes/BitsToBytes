@@ -25,8 +25,11 @@ class _VisionPageDesktopState extends State<VisionPageDesktop> {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 48.0),
         child: Row(
-          children:
-              visions.map((vision) => VisionCardDesk(vision: vision)).toList(),
+          children: [
+            VisionCardDesk(vision: visions[0]),
+            VisionCardDesk(vision: visions[1]),
+            VisionCardDesk(vision: visions[2]),
+          ],
         ),
       ),
     );

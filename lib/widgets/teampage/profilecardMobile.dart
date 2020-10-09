@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:url_launcher/url_launcher.dart' as url;
 
-class ProfileCard extends StatefulWidget {
-  const ProfileCard({
+class ProfileCardMobile extends StatefulWidget {
+  const ProfileCardMobile({
     Key key,
     this.firstName,
     this.lastName,
@@ -24,10 +24,10 @@ class ProfileCard extends StatefulWidget {
   final String instagrame;
   final String twitter;
   @override
-  _ProfileCardState createState() => _ProfileCardState();
+  _ProfileCardMobileState createState() => _ProfileCardMobileState();
 }
 
-class _ProfileCardState extends State<ProfileCard> {
+class _ProfileCardMobileState extends State<ProfileCardMobile> {
   double width = 0;
 
   Color textColor = Color(0xff6c6cff);
