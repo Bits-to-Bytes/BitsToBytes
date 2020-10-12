@@ -1,6 +1,8 @@
+import 'package:bitstobytes/providers/ScrollProvider.dart';
 import 'package:bitstobytes/widgets/navigationButtons.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:get/get.dart';
 
@@ -12,6 +14,7 @@ class Header extends StatefulWidget {
 class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
+    final scroll = Provider.of<ScrollProvider>(context);
     return ResponsiveBuilder(
       builder: (context, sizingInformation) {
         if (sizingInformation.isMobile) {
@@ -38,9 +41,14 @@ class _HeaderState extends State<Header> {
                   padding: const EdgeInsets.only(left: 48.0),
                   child: Row(
                     children: [
-                      Image.asset(
-                        'assets/logo.png',
-                        scale: 1,
+                      InkWell(
+                        child: Image.asset(
+                          'assets/logo.png',
+                          scale: 1,
+                        ),
+                        onTap: (){
+                          scroll.animateTo(1);
+                        },
                       ),
                       SizedBox(
                         width: 16,
@@ -51,17 +59,17 @@ class _HeaderState extends State<Header> {
                             TextSpan(
                               text: 'Bits ',
                               style: GoogleFonts.acme(
-                                  fontSize: 30, color: Colors.white),
+                                  fontSize: 30, color: Colors.black),
                             ),
                             TextSpan(
                               text: 'to ',
                               style: GoogleFonts.acme(
-                                  fontSize: 30, color: Colors.white),
+                                  fontSize: 30, color: Colors.black),
                             ),
                             TextSpan(
                               text: 'Bytes',
                               style: GoogleFonts.acme(
-                                  fontSize: 30, color: Colors.white),
+                                  fontSize: 30, color: Colors.black),
                             ),
                           ],
                         ),
@@ -93,7 +101,7 @@ class _HeaderState extends State<Header> {
                       page: 4,
                     ),
                     NavigationButton(
-                      title: 'Contact',
+                      title: 'Join Us',
                       page: 5,
                     ),
                   ],

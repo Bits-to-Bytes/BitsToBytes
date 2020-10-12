@@ -24,7 +24,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Meet The B2B Team",
+            "The BitsToBytes Team",
             style: theme.textTheme.headline2,
             textAlign: TextAlign.center,
           ),
@@ -48,7 +48,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                   ProfileCardDesk(
                     firstName: 'Vedant',
                     lastName: 'Jotangiya',
-                    title: "Management Lead",
+                    title: "Managerial Lead",
                     linkedIn: "http://www.linkedin.com/in/vedantjot",
                     github: "http://github.com/vedantjot",
                     profile: "assets/team/vedant.jpeg",
@@ -115,6 +115,20 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                 ],
               ),
             ],
+          ),
+          Text(
+              'Supporting Faculty : Prof.Chinmay Vyas',
+            style: TextStyle(
+              color:  Color(0xff393d69),
+              fontSize: 18,
+            ),
+          ),
+          Text(
+            '                          Prof.Karshan Kandoriya',
+            style: TextStyle(
+              color:  Color(0xff393d69),
+              fontSize: 18,
+            ),
           ),
         ],
       ),

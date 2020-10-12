@@ -19,20 +19,26 @@ class _TeamPageMobileState extends State<TeamPageMobile> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            "Meet The B2B Team",
-            style: theme.textTheme.headline2,
-            textAlign: TextAlign.center,
+          Flexible(
+            child: Text(
+              "The BitsToBytes Team",
+              style: theme.textTheme.headline2,
+              textAlign: TextAlign.center,
+            ),
           ),
-          Text(
-            "Passionate students and faculty staff driving the success of the program.",
-            style: theme.textTheme.headline3.copyWith(fontSize: 16),
-            textAlign: TextAlign.center,
+          Flexible(
+            child: Text(
+              "Passionate students and faculty staff driving the success of the program.",
+              style: theme.textTheme.headline3.copyWith(fontSize: 16),
+              textAlign: TextAlign.center,
+            ),
           ),
-          Text(
-            "We are One",
-            style: theme.textTheme.headline3.copyWith(fontSize: 16),
-            textAlign: TextAlign.center,
+          Flexible(
+            child: Text(
+              "We are One",
+              style: theme.textTheme.headline3.copyWith(fontSize: 16),
+              textAlign: TextAlign.center,
+            ),
           ),
           SizedBox(
             height: 64,
@@ -100,6 +106,25 @@ class _TeamPageMobileState extends State<TeamPageMobile> {
                 instagrame: "https://www.instagram.com/yashviwithawhy/",
               ),
             ],
+          ),
+
+          Flexible(
+            child: Text(
+              'Supporting Faculty : Prof.Chinmay Vyas',
+              style: TextStyle(
+                color:  Color(0xff393d69),
+                fontSize: 18,
+              ),
+            ),
+          ),
+          Flexible(
+            child: Text(
+              '                        : Prof.Karshan Kandoriya',
+              style: TextStyle(
+                color:  Color(0xff393d69),
+                fontSize: 18,
+              ),
+            ),
           ),
         ],
       ),

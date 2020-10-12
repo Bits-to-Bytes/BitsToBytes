@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:bitstobytes/providers/ScrollProvider.dart';
 import 'package:bitstobytes/widgets/Buttons/SocialButton.dart';
 
@@ -35,10 +37,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
               SocialButton(
                 link: "https://github.com/Bits-to-Bytes",
                 title: "GitHub",
-                colors: [
-                  Color(0xff2b5876),
-                  Color(0xff4e4376),
-                ],
+                colors:theme.accentColor,
                 icon: Icon(
                   FlutterIcons.github_ant,
                   color: Colors.white,
@@ -47,10 +46,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
               SocialButton(
                 title: "Facebook",
                 link: "https://www.facebook.com/bitstobytes.gecbhavnagar.9",
-                colors: [
-                  Color(0xff00d2ff),
-                  Color(0xff3a7bd5),
-                ],
+                colors: theme.accentColor,
                 icon: Icon(
                   FlutterIcons.facebook_box_mco,
                   color: Colors.white,
@@ -58,43 +54,22 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
               ),
               SocialButton(
                 link: "https://www.instagram.com/bits.to.bytes/",
-                title: "Instagrame",
-                colors: [
-                  Color(0xffB24592),
-                  Color(0xffF15F79),
-                ],
+                title: "Instagram",
+                colors: theme.accentColor,
                 icon: Icon(
                   FlutterIcons.social_instagram_sli,
                   color: Colors.white,
                 ),
               ),
               SocialButton(
-                link: "",
-                title: "LinkedIn",
-                colors: [
-                  Color(0xff7F7FD5),
-                  Color(0xff86A8E7),
-                  // Color(0xff91EAE4),
-                ],
-                icon: Icon(
-                  FlutterIcons.linkedin_box_mco,
-                  color: Colors.white,
-                ),
-              ),
-              SocialButton(
                 link: "https://twitter.com/BitstobytesGec",
                 title: "Twitter",
-                colors: [
-                  Color(0xff00c6ff),
-                  Color(0xff0072ff),
-                ],
+                colors:theme.accentColor,
                 icon: Icon(
                   FlutterIcons.twitter_ant,
                   color: Colors.white,
                 ),
               ),
-            ],
-          ),
           SocialButton(
             link: "https://bitstobytesworkspace.slack.com",
             title: "Slack",
@@ -102,15 +77,26 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
               FlutterIcons.slack_faw5d,
               color: Colors.white,
             ),
-            colors: [
-              // Color(0xff6ecadc),
-              // Color(0xff3eb991),
-              Color(0xffe9a820),
-              Color(0xffe01563),
-            ],
+            colors: theme.accentColor,
+
           )
         ],
       ),
+          SizedBox(
+            height: 50,
+          ),
+          Center(
+            child: Text(
+              'Nr. Sir BPTI Campus,\n'
+                  'Vidhyanagar, Bhavnagar,\n'
+                  'Gujarat 364002'
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+      ],
+    ),
     );
   }
 }

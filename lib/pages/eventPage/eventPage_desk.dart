@@ -22,7 +22,7 @@ class _EventPageDesktopState extends State<EventPageDesktop> {
       child: Column(
         children: [
           Text(
-            "Events & Workshops",
+            "Events",
             style: Theme.of(context).textTheme.headline2,
             textAlign: TextAlign.center,
           ),
@@ -30,7 +30,7 @@ class _EventPageDesktopState extends State<EventPageDesktop> {
             height: 10,
           ),
           Text(
-            "Come learn, share and connect with us in person.",
+            "Come, Learn, Share and Connect with us.",
             style: TextStyle(fontWeight: FontWeight.normal),
             textAlign: TextAlign.center,
           ),

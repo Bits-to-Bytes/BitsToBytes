@@ -5,7 +5,7 @@ class SocialButton extends StatefulWidget {
   final Icon icon;
   final String title;
   final String link;
-  final List<Color> colors;
+  final Color colors;
 
   SocialButton({this.icon, this.title, this.link, this.colors});
 
@@ -37,16 +37,13 @@ class _SocialButtonState extends State<SocialButton> {
           },
           child: Container(
             alignment: Alignment.center,
-            height: 35,
-            width: 130,
+            height: 50,
+            width: 210,
             decoration: BoxDecoration(
               // color: Color(0xff23282D),
-              gradient: LinearGradient(
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-                colors: widget.colors,
-              ),
-              borderRadius: BorderRadius.circular(5),
+              shape: BoxShape.circle,
+              color: widget.colors,
+             // borderRadius: BorderRadius.circular(25),
               boxShadow: [
                 BoxShadow(
                   offset: Offset(0, 10),
@@ -55,21 +52,7 @@ class _SocialButtonState extends State<SocialButton> {
                 )
               ],
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  widget.title,
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                widget.icon,
-              ],
-            ),
+            child: widget.icon
           ),
         ),
       ),

@@ -119,6 +119,15 @@ class _ProfileCardDeskState extends State<ProfileCardDesk> {
                 children: [
                   IconButton(
                     icon: Icon(
+                      FlutterIcons.linkedin_box_mco,
+                    ),
+                    onPressed: () {
+                      url.launch(widget.linkedIn);
+                    },
+                    iconSize: 18,
+                  ),
+                  IconButton(
+                    icon: Icon(
                       FlutterIcons.social_instagram_sli,
                     ),
                     onPressed: () {
@@ -132,15 +141,6 @@ class _ProfileCardDeskState extends State<ProfileCardDesk> {
                     ),
                     onPressed: () {
                       url.launch(widget.github);
-                    },
-                    iconSize: 18,
-                  ),
-                  IconButton(
-                    icon: Icon(
-                      FlutterIcons.linkedin_box_mco,
-                    ),
-                    onPressed: () {
-                      url.launch(widget.linkedIn);
                     },
                     iconSize: 18,
                   ),

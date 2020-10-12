@@ -69,7 +69,7 @@ class _EntryPageDesktopState extends State<EntryPageDesktop> {
                         width: 10,
                       ),
                       Text(
-                        "Became a member",
+                        "Become a member",
                         style: theme.textTheme.headline6,
                       ),
                     ],

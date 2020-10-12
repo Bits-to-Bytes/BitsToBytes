@@ -64,7 +64,7 @@ class _EntrypageMobileState extends State<EntrypageMobile> {
                   width: 10,
                 ),
                 Text(
-                  "Became a member",
+                  "Become a member",
                   style: theme.textTheme.headline6,
                 ),
               ],
