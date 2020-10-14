@@ -1,4 +1,7 @@
+import 'dart:html';
+
 import 'package:bitstobytes/providers/ScrollProvider.dart';
+import 'package:bitstobytes/widgets/teampage/facultyCard.dart';
 import 'package:bitstobytes/widgets/teampage/profileCardDesk.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,18 +25,26 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 80.0,),
+          SizedBox(
+            height: 80.0,
+          ),
           Text(
             "The BitsToBytes Team",
             style: theme.textTheme.headline2,
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 12.0,),
+          SizedBox(
+            height: 12.0,
+          ),
           Text(
             "Passionate students and faculty staff driving the success of the program.",
             style: theme.textTheme.headline3.copyWith(fontSize: 16),
             textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 18,
           ),
           Text(
             "We are One",
@@ -118,20 +129,30 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
               ),
             ],
           ),
-          // Text(
-          //     'Supporting Faculty : Prof.Chinmay Vyas',
-          //   style: TextStyle(
-          //     color:  Color(0xff393d69),
-          //     fontSize: 18,
-          //   ),
-          // ),
-          // Text(
-          //   '                          Prof.Karshan Kandoriya',
-          //   style: TextStyle(
-          //     color:  Color(0xff393d69),
-          //     fontSize: 18,
-          //   ),
-          // ),
+          SizedBox(
+            height: 36.0,
+          ),
+          Text(
+            "Support",
+            style: theme.textTheme.headline2,
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 14,
+          ),
+          Wrap(
+            children: [
+              FacultyCard(
+                profile: "assets/faculty/pc.png",
+              ),
+              FacultyCard(
+                profile: "assets/faculty/fc.png",
+              ),
+              FacultyCard(
+                profile: "assets/faculty/fa.png",
+              )
+            ],
+          )
         ],
       ),
     );

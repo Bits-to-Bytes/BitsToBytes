@@ -1,6 +1,8 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:bitstobytes/providers/ScrollProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 class EventPageDesktop extends StatefulWidget {
@@ -49,12 +51,24 @@ class _EventPageDesktopState extends State<EventPageDesktop> {
             color: Theme.of(context).accentColor,
           ),
           SizedBox(
-            height: 100.0,
+            height: 80.0,
           ),
           Text(
-            "Launch event coming soon",
+            "\"Launch Event\"",
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 23),
+          ),
+
+          SizedBox(
+            height: 300,
+            child: WavyAnimatedTextKit(
+                isRepeatingAnimation: true,
+                text: ["coming soon"],
+                textStyle: TextStyle(
+                  fontSize: 32,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                )),
           ),
         ],
       ),

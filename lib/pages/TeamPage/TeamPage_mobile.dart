@@ -1,4 +1,5 @@
 import 'package:bitstobytes/providers/ScrollProvider.dart';
+import 'package:bitstobytes/widgets/teampage/facultyCard.dart';
 import 'package:bitstobytes/widgets/teampage/profilecardMobile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -38,7 +39,6 @@ class _TeamPageMobileState extends State<TeamPageMobile> {
           style: theme.textTheme.headline3.copyWith(fontSize: 16),
           textAlign: TextAlign.center,
         ),
-
         Column(
           children: [
             ProfileCardMobile(
@@ -103,20 +103,30 @@ class _TeamPageMobileState extends State<TeamPageMobile> {
             ),
           ],
         ),
-        // Text(
-        //   'Supporting Faculty : Prof.Chinmay Vyas',
-        //   style: TextStyle(
-        //     color: Color(0xff393d69),
-        //     fontSize: 18,
-        //   ),
-        // ),
-        // Text(
-        //   '                        : Prof.Karshan Kandoriya',
-        //   style: TextStyle(
-        //     color: Color(0xff393d69),
-        //     fontSize: 18,
-        //   ),
-        // ),
+        SizedBox(
+          height: 36.0,
+        ),
+        Text(
+          "Support",
+          style: theme.textTheme.headline2,
+          textAlign: TextAlign.center,
+        ),
+        SizedBox(
+          height: 14,
+        ),
+        Wrap(
+          children: [
+            FacultyCard(
+              profile: "assets/faculty/pc.png",
+            ),
+            FacultyCard(
+              profile: "assets/faculty/fc.png",
+            ),
+            FacultyCard(
+              profile: "assets/faculty/fa.png",
+            )
+          ],
+        )
       ],
     );
   }
