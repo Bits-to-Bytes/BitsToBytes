@@ -59,7 +59,6 @@ class _VisionCardDeskState extends State<VisionCardDesk> {
               Text(
                 widget.vision.title,
                 style: TextStyle(
-                  fontFamily: "SourceCodePro",
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
@@ -69,7 +68,10 @@ class _VisionCardDeskState extends State<VisionCardDesk> {
               ),
               Text(
                 widget.vision.info,
-                style: TextStyle(),
+                style: Theme.of(context)
+                    .textTheme
+                    .headline3
+                    .copyWith(fontSize: 17),
               )
             ],
           ),
@@ -79,7 +81,7 @@ class _VisionCardDeskState extends State<VisionCardDesk> {
   }
 }
 
-class VisionCardMobile extends StatefulWidget {
+class VisionCardMobile extends StatelessWidget {
   final Vision vision;
   const VisionCardMobile({
     Key key,
@@ -87,26 +89,18 @@ class VisionCardMobile extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _VisionCardMobileState createState() => _VisionCardMobileState();
-}
-
-class _VisionCardMobileState extends State<VisionCardMobile> {
-  double blureRadius = 12;
-
-  @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(24.0),
+      margin: const EdgeInsets.all(24.0) + EdgeInsets.only(top: 30.0),
       constraints: BoxConstraints(
         maxWidth: 480,
       ),
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
-        borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
             offset: Offset(0, 0),
-            blurRadius: blureRadius,
+            blurRadius: 12,
             spreadRadius: 0,
             color: Colors.black.withOpacity(0.20),
           )
@@ -117,12 +111,12 @@ class _VisionCardMobileState extends State<VisionCardMobile> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          widget.vision.icon,
+          vision.icon,
           SizedBox(
             height: 16.0,
           ),
           Text(
-            widget.vision.title,
+            vision.title,
             style: TextStyle(
               fontFamily: "SourceCodePro",
               fontSize: 18,
@@ -133,8 +127,8 @@ class _VisionCardMobileState extends State<VisionCardMobile> {
             height: 16.0,
           ),
           Text(
-            widget.vision.info,
-            style: TextStyle(),
+            vision.info,
+            style: Theme.of(context).textTheme.headline3.copyWith(fontSize: 17),
           )
         ],
       ),

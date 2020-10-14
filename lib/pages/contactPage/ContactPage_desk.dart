@@ -1,11 +1,9 @@
-import 'dart:html';
-
 import 'package:bitstobytes/providers/ScrollProvider.dart';
 import 'package:bitstobytes/widgets/Buttons/SocialButton.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:get/get.dart';
+import 'package:link_text/link_text.dart';
 import 'package:provider/provider.dart';
 
 class ContactPageDesk extends StatefulWidget {
@@ -20,7 +18,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
     final theme = Theme.of(context);
     return Container(
       key: scroll.keys[4],
-      constraints: BoxConstraints(minWidth: context.width, minHeight: 350),
+      constraints: BoxConstraints(minWidth: context.width, minHeight: 250),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -29,7 +27,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
             style: theme.textTheme.headline2,
           ),
           SizedBox(
-            height: 45,
+            height: 5,
           ),
           Wrap(
             alignment: WrapAlignment.center,
@@ -37,7 +35,7 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
               SocialButton(
                 link: "https://github.com/Bits-to-Bytes",
                 title: "GitHub",
-                colors:theme.accentColor,
+                colors: theme.accentColor,
                 icon: Icon(
                   FlutterIcons.github_ant,
                   color: Colors.white,
@@ -64,39 +62,47 @@ class _ContactPageDeskState extends State<ContactPageDesk> {
               SocialButton(
                 link: "https://twitter.com/BitstobytesGec",
                 title: "Twitter",
-                colors:theme.accentColor,
+                colors: theme.accentColor,
                 icon: Icon(
                   FlutterIcons.twitter_ant,
                   color: Colors.white,
                 ),
               ),
-          SocialButton(
-            link: "https://bitstobytesworkspace.slack.com",
-            title: "Slack",
-            icon: Icon(
-              FlutterIcons.slack_faw5d,
-              color: Colors.white,
-            ),
-            colors: theme.accentColor,
-
-          )
+              // SocialButton(
+              //   link: "https://bitstobytesworkspace.slack.com",
+              //   title: "Slack",
+              //   icon: Icon(
+              //     FlutterIcons.slack_faw5d,
+              //     color: Colors.white,
+              //   ),
+              //   colors: theme.accentColor,
+              // )
+            ],
+          ),
+          SizedBox(
+            height: 30.0,
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 48,
+              ),
+              Expanded(
+                child: LinkText(
+                  text: 'Government Engineering College, Bhavnagar,\n'
+                      'Nr. Sir BPTI Campus, Vidhyanagar, Bhavnagar,\n'
+                      'Gujarat 364002, India,\n'
+                      '+91 278 252 5354\n'
+                      'https://maps.app.goo.gl/6xuVgLAcD1VvRxSW9',
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 20.0,
+          ),
         ],
       ),
-          SizedBox(
-            height: 50,
-          ),
-          Center(
-            child: Text(
-              'Nr. Sir BPTI Campus,\n'
-                  'Vidhyanagar, Bhavnagar,\n'
-                  'Gujarat 364002'
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-      ],
-    ),
     );
   }
 }

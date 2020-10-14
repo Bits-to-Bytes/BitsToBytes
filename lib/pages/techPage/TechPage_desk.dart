@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart' as url;
 
 class TechPageDesk extends StatefulWidget {
   @override
@@ -28,9 +29,6 @@ class _TechPageDeskState extends State<TechPageDesk> {
             "Opportunities to learn & access deep technical content.",
             style: theme.textTheme.headline3.copyWith(fontSize: 16),
           ),
-          SizedBox(
-            height: 104.0,
-          ),
           TechCard(
             isOdd: true,
             image: "assets/b2b3.png",
@@ -55,10 +53,13 @@ class _TechPageDeskState extends State<TechPageDesk> {
           TechCard(
             isOdd: false,
             image: "assets/b2b6.png",
-            title: "Machine Intelligence",
+            title: "Artificial Intelligence",
             info:
                 "Learn how to drive user engagement and retention with intelligent apps that are able to effectively serve users what they need without the fuss by providing these systems with the ability to utomatically learn and improve from experience without being explicitly programmed.",
           ),
+          SizedBox(
+            height: 30.0,
+          )
         ],
       ),
     );
@@ -91,7 +92,9 @@ class _TechCardState extends State<TechCard> {
     final theme = Theme.of(context);
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 110, horizontal: 0.0),
+      padding: const EdgeInsets.only(
+        top: 110,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
@@ -123,7 +126,7 @@ class _TechCardState extends State<TechCard> {
           ),
           Text(
             widget.info,
-            style: theme.textTheme.headline3.copyWith(fontSize: 15),
+            style: theme.textTheme.headline3.copyWith(fontSize: 16),
           ),
           SizedBox(
             height: 24.0,
@@ -135,7 +138,9 @@ class _TechCardState extends State<TechCard> {
               height: 40,
               color: theme.accentColor,
               elevation: 10,
-              onPressed: () {},
+              onPressed: () {
+                url.launch(widget.link);
+              },
               child: Row(
                 children: [Text("CodeLabs"), Icon(Icons.arrow_forward)],
               ),

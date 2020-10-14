@@ -1,6 +1,8 @@
+import 'package:bitstobytes/providers/ScrollProvider.dart';
 import 'package:floating_action_bubble/floating_action_bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:provider/provider.dart';
 
 class CustomFAB extends StatefulWidget {
   @override
@@ -36,20 +38,22 @@ class _CustomFABState extends State<CustomFAB>
 
   @override
   Widget build(BuildContext context) {
+    final scroll = Provider.of<ScrollProvider>(context);
     final theme = Theme.of(context);
     return FloatingActionBubble(
       animatedIconData: AnimatedIcons.menu_close,
       backGroundColor: theme.accentColor,
       items: <Bubble>[
         Bubble(
-
           title: "Contact",
           iconColor: Colors.white,
           bubbleColor: theme.accentColor,
           icon: FlutterIcons.md_contact_ion,
           titleStyle: TextStyle(fontSize: 16, color: Colors.white),
           onPress: () {
+            isTrue = false;
             _animationController.reverse();
+            scroll.animateTo(5);
           },
         ),
         Bubble(
@@ -59,7 +63,9 @@ class _CustomFABState extends State<CustomFAB>
           icon: FlutterIcons.users_fea,
           titleStyle: TextStyle(fontSize: 16, color: Colors.white),
           onPress: () {
+            isTrue = false;
             _animationController.reverse();
+            scroll.animateTo(4);
           },
         ),
         Bubble(
@@ -69,7 +75,9 @@ class _CustomFABState extends State<CustomFAB>
           icon: FlutterIcons.event_mdi,
           titleStyle: TextStyle(fontSize: 16, color: Colors.white),
           onPress: () {
+            isTrue = false;
             _animationController.reverse();
+            scroll.animateTo(2);
           },
         ),
         Bubble(
@@ -79,7 +87,9 @@ class _CustomFABState extends State<CustomFAB>
           icon: Icons.home,
           titleStyle: TextStyle(fontSize: 16, color: Colors.white),
           onPress: () {
+            isTrue = false;
             _animationController.reverse();
+            scroll.animateTo(1);
           },
         ),
       ],

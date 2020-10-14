@@ -10,7 +10,7 @@ class EntryPageDesktop extends StatefulWidget {
 
 class _EntryPageDesktopState extends State<EntryPageDesktop> {
   final String info =
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec neque nibh. Integer finibus vehicula vehicula. Donec fermentum vestibulum molestie. Suspendisse volutpat';
+      'Being a programming club of the institution, we assure pretty much everything you ask for! We conduct events and workshops, hold lectures and talks, and even host coding competitions and hackathons.';
 
   @override
   Widget build(BuildContext context) {
@@ -49,13 +49,20 @@ class _EntryPageDesktopState extends State<EntryPageDesktop> {
                 ),
                 Text(
                   info,
-                  style: theme.textTheme.headline3,
+                  style: theme.textTheme.headline3.copyWith(fontSize: 20),
                 ),
                 SizedBox(
                   height: 48,
                 ),
                 MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      child: AlertDialog(
+                        content: Text("Registration will start soon",textAlign: TextAlign.center,),
+                      ),
+                    );
+                  },
                   height: 40,
                   minWidth: 200,
                   elevation: 10,

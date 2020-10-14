@@ -38,13 +38,13 @@ class _HeaderState extends State<Header> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 48.0),
+                  padding: const EdgeInsets.only(left: 45.0),
                   child: Row(
                     children: [
                       InkWell(
                         child: Image.asset(
                           'assets/logo.png',
-                          scale: 1,
+                          scale: 2.5,
                         ),
                         onTap: (){
                           scroll.animateTo(1);

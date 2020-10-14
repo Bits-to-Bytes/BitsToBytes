@@ -16,25 +16,24 @@ final lightTheme = ThemeData(
     ),
   ),
   brightness: Brightness.light,
-  fontFamily: "SourceCodePro",
   textTheme: TextTheme(
-    headline1: TextStyle(
-      fontSize: 40,
-      color: Colors.black,
-      fontWeight: FontWeight.bold,
-    ),
-    headline2: TextStyle(
-      fontSize: 30,
-      color: Colors.black,
-      fontWeight: FontWeight.bold,
-    ),
-    headline3: TextStyle(
-      fontSize: 22,
-      // color: Colors.black,
-    ),    headline6: TextStyle(
-      color: Colors.white,
-    )
-  ),
+      headline1: TextStyle(
+        fontSize: 40,
+        color: Colors.black,
+        fontWeight: FontWeight.bold,
+      ),
+      headline2: TextStyle(
+        fontSize: 30,
+        color: Colors.black,
+        fontWeight: FontWeight.bold,
+      ),
+      headline3: TextStyle(
+        fontSize: 22,
+        // color: Colors.black,
+      ),
+      headline6: TextStyle(
+        color: Colors.white,
+      )),
   buttonTheme: ButtonThemeData(
     textTheme: ButtonTextTheme.primary,
   ),
@@ -58,24 +57,23 @@ final darkTheme = ThemeData(
   brightness: Brightness.dark,
   fontFamily: "SourceCodePro",
   textTheme: TextTheme(
-    headline1: TextStyle(
-      fontSize: 40,
-      color: Colors.white,
-      fontWeight: FontWeight.bold,
-    ),
-    headline2: TextStyle(
-      fontSize: 30,
-      color: Colors.white,
-      fontWeight: FontWeight.bold,
-    ),
-    headline3: TextStyle(
-      fontSize: 22,
-      // color: Colors.black,
-    ),
-    headline6: TextStyle(
-      color: Colors.white,
-    )
-  ),
+      headline1: TextStyle(
+        fontSize: 40,
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
+      headline2: TextStyle(
+        fontSize: 30,
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
+      headline3: TextStyle(
+        fontSize: 22,
+        // color: Colors.black,
+      ),
+      headline6: TextStyle(
+        color: Colors.white,
+      )),
   buttonTheme: ButtonThemeData(
     textTheme: ButtonTextTheme.normal,
   ),

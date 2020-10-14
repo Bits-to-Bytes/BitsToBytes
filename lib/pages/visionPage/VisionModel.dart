@@ -19,14 +19,14 @@ final vision1 = Vision(
   ),
   title: "What is BitsToBytes?",
   info:
-      "The BitsToBytes club is a grassroots channel through which We provides development skills, mobile and web development skills for students, towards employability.",
+      "Bits to bytes is a programming club of GEC Bhavnagar, which works for the development of students. Also, the club is an opportunity bundle which includes many fields of knowledge. Explore it in your ways and learn it through us!",
 );
 
 final vision2 = Vision(
   icon: Icon(FlutterIcons.bulb1_ant, size: 45, color: Colors.green),
   title: "Mission",
   info:
-      "For students to learn development skills, solve problems through technology and inspire them to be world className developers and changemakers.",
+      "To educate students so they get exposure to the technical world and enlighten their skills. Hence , the programming club will highlight all the skills of the individual members and develop in a meaningful way.",
 );
 
 final vision3 = Vision(
@@ -37,7 +37,7 @@ final vision3 = Vision(
   ),
   title: "Who is it for?",
   info:
-      "BitsToBytes activities are targeted at University students and any others including faculty members who want to learn development skills & work to solve real-life problems.",
+      "Bits to bytes is for EVERYONE who want to learn something and then want to share.The club believes in helping any individual and also using their  skills to upgrade the club.",
 );
 
 final List<Vision> visions = [

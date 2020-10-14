@@ -30,7 +30,7 @@ class _EventPageDesktopState extends State<EventPageDesktop> {
             height: 10,
           ),
           Text(
-            "Come, Learn, Share and Connect with us.",
+            "Come learn, share and connect with us.",
             style: TextStyle(fontWeight: FontWeight.normal),
             textAlign: TextAlign.center,
           ),
@@ -40,13 +40,22 @@ class _EventPageDesktopState extends State<EventPageDesktop> {
           Text(
             "Upcoming Events",
             style: Theme.of(context).textTheme.headline3,
+            textAlign: TextAlign.center,
           ),
           Container(
             margin: const EdgeInsets.only(top: 3),
             height: 2,
             width: 240,
             color: Theme.of(context).accentColor,
-          )
+          ),
+          SizedBox(
+            height: 100.0,
+          ),
+          Text(
+            "Launch event coming soon",
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 23),
+          ),
         ],
       ),
     );

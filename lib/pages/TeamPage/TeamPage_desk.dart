@@ -23,11 +23,13 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(height: 80.0,),
           Text(
             "The BitsToBytes Team",
             style: theme.textTheme.headline2,
             textAlign: TextAlign.center,
           ),
+          SizedBox(height: 12.0,),
           Text(
             "Passionate students and faculty staff driving the success of the program.",
             style: theme.textTheme.headline3.copyWith(fontSize: 16),
@@ -39,7 +41,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
             textAlign: TextAlign.center,
           ),
           SizedBox(
-            height: 64,
+            height: 14,
           ),
           Column(
             children: [
@@ -51,7 +53,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                     title: "Managerial Lead",
                     linkedIn: "http://www.linkedin.com/in/vedantjot",
                     github: "http://github.com/vedantjot",
-                    profile: "assets/team/vedant.jpeg",
+                    profile: "assets/team/vedant.png",
                     twitter: "http://twitter.com/vedantjot",
                     instagrame: "http://www.instagram.com/vedantjot",
                   ),
@@ -59,7 +61,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                     firstName: 'Neel',
                     lastName: 'Gorasiya',
                     title: "Technical Lead",
-                    profile: "assets/team/neel.jpeg",
+                    profile: "assets/team/neel.png",
                     linkedIn: "https://www.linkedin.com/in/gorasiyaneel",
                     github: "https://github.com/Neel2904",
                     instagrame: "https://instagram.com/neelg_2904",
@@ -69,7 +71,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                     firstName: 'Ishita',
                     lastName: 'Keshawani',
                     title: "Executive Member",
-                    profile: "assets/team/ishita.jpeg",
+                    profile: "assets/team/ishita.png",
                     twitter: "https://twitter.com/ishitakeshawani",
                     instagrame: "https://instagram.com/ishitakeshawani",
                     linkedIn: "https://www.linkedin.com/in/ishitakeshawani",
@@ -90,13 +92,13 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                     instagrame: "https://www.instagram.com/_.mi10._/",
                     linkedIn: "https://www.linkedin.com/in/mitengajjar/",
                     github: "https://github.com/GajjarMiten",
-                    profile: "assets/team/miten.jpeg",
+                    profile: "assets/team/miten.png",
                   ),
                   ProfileCardDesk(
                     firstName: 'Aum',
                     lastName: 'Joshi',
                     title: "Executive Member",
-                    profile: "assets/team/aum.jpeg",
+                    profile: "assets/team/aum.png",
                     linkedIn: "https://www.linkedin.com/in/aum-joshi",
                     github: "https://github.com/aumjoshi",
                     twitter: "https://twitter.com/aumjoshii",
@@ -106,7 +108,7 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
                     firstName: 'Yashvi',
                     lastName: 'Patel',
                     title: "Executive Member",
-                    profile: "assets/team/yashvi.jpeg",
+                    profile: "assets/team/yashvi.png",
                     linkedIn: "https://github.com/patelyashvi",
                     github: "https://github.com/patelyashvi",
                     twitter: "https://twitter.com/YashviP97470687",
@@ -116,20 +118,20 @@ class _TeamPageDeskState extends State<TeamPageDesk> {
               ),
             ],
           ),
-          Text(
-              'Supporting Faculty : Prof.Chinmay Vyas',
-            style: TextStyle(
-              color:  Color(0xff393d69),
-              fontSize: 18,
-            ),
-          ),
-          Text(
-            '                          Prof.Karshan Kandoriya',
-            style: TextStyle(
-              color:  Color(0xff393d69),
-              fontSize: 18,
-            ),
-          ),
+          // Text(
+          //     'Supporting Faculty : Prof.Chinmay Vyas',
+          //   style: TextStyle(
+          //     color:  Color(0xff393d69),
+          //     fontSize: 18,
+          //   ),
+          // ),
+          // Text(
+          //   '                          Prof.Karshan Kandoriya',
+          //   style: TextStyle(
+          //     color:  Color(0xff393d69),
+          //     fontSize: 18,
+          //   ),
+          // ),
         ],
       ),
     );

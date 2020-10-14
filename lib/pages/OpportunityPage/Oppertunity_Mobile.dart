@@ -14,7 +14,8 @@ class _OppertunityMobileState extends State<OppertunityMobile> {
         minHeight: context.height,
         minWidth: context.width,
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 24.0)+EdgeInsets.only(top:64.0),
+      padding: const EdgeInsets.symmetric(horizontal: 24.0) +
+          EdgeInsets.only(top: 64.0),
       child: Column(
         children: [
           Text(
@@ -55,7 +56,7 @@ class _OppertunityMobileState extends State<OppertunityMobile> {
           Text(
             String.fromCharCode(0x2022) +
                 ' ' +
-                "Getting inspiration to become world-className developers and changemakers from sharing others' success stories.",
+                "You will get a platform to interact with new developers and learn something new, using contests and webinars, endorse your skills and interactive sessions will give a real-time experience to a member.",
             style: Theme.of(context).textTheme.headline3.copyWith(fontSize: 17),
           )
         ],

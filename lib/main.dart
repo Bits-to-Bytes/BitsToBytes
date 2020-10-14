@@ -1,7 +1,6 @@
 import 'package:bitstobytes/HomePage.dart';
 import 'package:bitstobytes/helpers/theme.dart';
 import 'package:bitstobytes/providers/ScrollProvider.dart';
-import 'package:bitstobytes/providers/ThemeProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

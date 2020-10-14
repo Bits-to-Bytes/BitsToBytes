@@ -32,28 +32,28 @@ class _SocialButtonState extends State<SocialButton> {
           });
         },
         child: InkWell(
-          onTap: (){
+          borderRadius: BorderRadius.circular(25),
+          onTap: () {
             url.launch(widget.link);
           },
           child: Container(
-            alignment: Alignment.center,
-            height: 50,
-            width: 210,
-            decoration: BoxDecoration(
-              // color: Color(0xff23282D),
-              shape: BoxShape.circle,
-              color: widget.colors,
-             // borderRadius: BorderRadius.circular(25),
-              boxShadow: [
-                BoxShadow(
-                  offset: Offset(0, 10),
-                  blurRadius: blureRadius,
-                  color: Colors.black.withOpacity(0.25),
-                )
-              ],
-            ),
-            child: widget.icon
-          ),
+              alignment: Alignment.center,
+              height: 50,
+              width: 50,
+              decoration: BoxDecoration(
+                // color: Color(0xff23282D),
+                shape: BoxShape.circle,
+                color: widget.colors,
+                // borderRadius: BorderRadius.circular(25),
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(0, 10),
+                    blurRadius: blureRadius,
+                    color: Colors.black.withOpacity(0.25),
+                  )
+                ],
+              ),
+              child: widget.icon),
         ),
       ),
     );

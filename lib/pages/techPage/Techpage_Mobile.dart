@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart' as url;
 
 class TechPageMobile extends StatefulWidget {
   @override
@@ -42,24 +43,28 @@ class _TechPageMobileState extends State<TechPageMobile> {
               title: "Android Development",
               info:
                   "Every year Google developers release exciting new updates to the world's most popular operating system. We always have sessions to keep you updated and mastering the latest trends in modern Android development.",
+              link: "https://codelabs.developers.google.com/android-training/",
             ),
             TechCard(
               image: "assets/b2b4.png",
               title: "Web Development",
               info:
                   "Learn the core foundations of a delightful web experience both for the user and developer. Stay up to tabs with emerging and trending technologies. Get access to a guided, tutorial and hands-on coding experience.",
+              link: "https://codelabs.developers.google.com/?cat=Web",
             ),
             TechCard(
               image: "assets/b2b5.png",
               title: "Cloud Computing",
               info:
                   "For passionate developers who want to stay relevant in a cloud first world where businesses demand for agility and innovation and prompt rise of cloud-native applications to ridges gaps between data, insight, and action.",
+              link: "https://codelabs.developers.google.com/?cat=Cloud",
             ),
             TechCard(
               image: "assets/b2b6.png",
-              title: "Machine Intelligence",
+              title: "Artificial Intelligence",
               info:
                   "Learn how to drive user engagement and retention with intelligent apps that are able to effectively serve users what they need without the fuss by providing these systems with the ability to utomatically learn and improve from experience without being explicitly programmed.",
+              link: "https://codelabs.developers.google.com/?cat=TensorFlow",
             ),
           ],
         ),
@@ -96,7 +101,9 @@ class _TechCardState extends State<TechCard> {
       child: Column(
         children: [
           buildExpandedImage(size),
-          SizedBox(height: 38.0,),
+          SizedBox(
+            height: 38.0,
+          ),
           buildExpandedInfo(theme, size),
         ],
       ),
@@ -118,7 +125,7 @@ class _TechCardState extends State<TechCard> {
           ),
           Text(
             widget.info,
-            style: theme.textTheme.headline3.copyWith(fontSize: 15),
+            style: theme.textTheme.headline3.copyWith(fontSize: 16),
           ),
           SizedBox(
             height: 24.0,
@@ -130,7 +137,9 @@ class _TechCardState extends State<TechCard> {
               height: 40,
               color: theme.accentColor,
               elevation: 10,
-              onPressed: () {},
+              onPressed: () {
+                url.launch(widget.link);
+              },
               child: Row(
                 children: [Text("CodeLabs"), Icon(Icons.arrow_forward)],
               ),
