@@ -1,4 +1,5 @@
-import 'package:bitstobytes/widgets/visionPage/VisionCard.dart';
+
+import 'package:BitsToBytes/widgets/visionPage/VisionCard.dart';
 import 'package:flutter/material.dart';
 
 import 'VisionModel.dart';

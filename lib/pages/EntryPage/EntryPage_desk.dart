@@ -1,6 +1,7 @@
-import 'package:bitstobytes/providers/ScrollProvider.dart';
+import 'package:BitsToBytes/providers/ScrollProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 class EntryPageDesktop extends StatefulWidget {
@@ -8,9 +9,11 @@ class EntryPageDesktop extends StatefulWidget {
   _EntryPageDesktopState createState() => _EntryPageDesktopState();
 }
 
-class _EntryPageDesktopState extends State<EntryPageDesktop> {
+class _EntryPageDesktopState extends State<EntryPageDesktop>
+    with SingleTickerProviderStateMixin {
   final String info =
       'Being a programming club of the institution, we assure pretty much everything you ask for! We conduct events and workshops, hold lectures and talks, and even host coding competitions and hackathons.';
+
 
   @override
   Widget build(BuildContext context) {
@@ -23,75 +26,84 @@ class _EntryPageDesktopState extends State<EntryPageDesktop> {
       ),
       width: context.width,
       padding: const EdgeInsets.only(left: 48.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Stack(
         children: [
-          LimitedBox(
-            maxWidth: context.width * 0.4,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                RichText(
-                  text: TextSpan(
+                LimitedBox(
+                  maxWidth: context.width * 0.4,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      TextSpan(text: "Bits To Bytes\n"),
-                      TextSpan(
-                          text: "GEC Bhavnagar",
-                          style: theme.textTheme.headline2),
-                    ],
-                    style: theme.textTheme.headline1,
-                  ),
-                ),
-                SizedBox(
-                  height: 36,
-                ),
-                Text(
-                  info,
-                  style: theme.textTheme.headline3.copyWith(fontSize: 20),
-                ),
-                SizedBox(
-                  height: 48,
-                ),
-                MaterialButton(
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      child: AlertDialog(
-                        content: Text("Registration will start soon",textAlign: TextAlign.center,),
-                      ),
-                    );
-                  },
-                  height: 40,
-                  minWidth: 200,
-                  elevation: 10,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(
-                        Icons.account_circle_rounded,
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(text: "Bits To Bytes\n"),
+                            TextSpan(
+                                text: "GEC Bhavnagar",
+                                style: theme.textTheme.headline2),
+                          ],
+                          style: theme.textTheme.headline1,
+                        ),
                       ),
                       SizedBox(
-                        width: 10,
+                        height: 36,
                       ),
                       Text(
-                        "Become a member",
-                        style: theme.textTheme.headline6,
+                        info,
+                        style: theme.textTheme.headline3.copyWith(fontSize: 20),
                       ),
+                      SizedBox(
+                        height: 48,
+                      ),
+                      MaterialButton(
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            child: AlertDialog(
+                              content: Text(
+                                "Registration will start soon",
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                          );
+                        },
+                        height: 40,
+                        minWidth: 200,
+                        elevation: 10,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              Icons.account_circle_rounded,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              "Become a member",
+                              style: theme.textTheme.headline6,
+                            ),
+                          ],
+                        ),
+                        color: theme.accentColor,
+                      )
                     ],
                   ),
-                  color: theme.accentColor,
-                )
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(100.0),
+                    child: Image.asset(
+                      'assets/b2b1.png',
+                    ),
+                  ),
+                ),
               ],
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(100.0),
-              child: Image.asset(
-                'assets/b2b1.png',
-              ),
             ),
           ),
         ],

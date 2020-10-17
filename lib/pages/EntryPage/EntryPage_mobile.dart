@@ -1,4 +1,5 @@
-import 'package:bitstobytes/providers/ScrollProvider.dart';
+
+import 'package:BitsToBytes/providers/ScrollProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';

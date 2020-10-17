@@ -1,7 +1,9 @@
-import 'package:bitstobytes/pages/techPage/TechPage_desk.dart';
-import 'package:bitstobytes/pages/techPage/Techpage_Mobile.dart';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import 'TechPage_desk.dart';
+import 'Techpage_Mobile.dart';
 
 class TechPage extends StatefulWidget {
   @override

@@ -1,6 +1,8 @@
-import 'package:bitstobytes/pages/contactPage/ContactPage_desk.dart';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import 'ContactPage_desk.dart';
 
 class ContactPage extends StatefulWidget {
   @override

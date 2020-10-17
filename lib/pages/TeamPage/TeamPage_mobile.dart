@@ -1,6 +1,7 @@
-import 'package:bitstobytes/providers/ScrollProvider.dart';
-import 'package:bitstobytes/widgets/teampage/facultyCard.dart';
-import 'package:bitstobytes/widgets/teampage/profilecardMobile.dart';
+
+import 'package:BitsToBytes/providers/ScrollProvider.dart';
+import 'package:BitsToBytes/widgets/teampage/facultyCard.dart';
+import 'package:BitsToBytes/widgets/teampage/profilecardMobile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -107,7 +108,7 @@ class _TeamPageMobileState extends State<TeamPageMobile> {
           height: 36.0,
         ),
         Text(
-          "Support",
+          "Board of authority",
           style: theme.textTheme.headline2,
           textAlign: TextAlign.center,
         ),
@@ -120,10 +121,10 @@ class _TeamPageMobileState extends State<TeamPageMobile> {
               profile: "assets/faculty/pc.png",
             ),
             FacultyCard(
-              profile: "assets/faculty/fc.png",
+              profile: "assets/faculty/fa.png",
             ),
             FacultyCard(
-              profile: "assets/faculty/fa.png",
+              profile: "assets/faculty/fc.png",
             )
           ],
         )

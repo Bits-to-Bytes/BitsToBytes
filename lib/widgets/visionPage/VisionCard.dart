@@ -1,4 +1,5 @@
-import 'package:bitstobytes/pages/visionPage/VisionModel.dart';
+
+import 'package:BitsToBytes/pages/visionPage/VisionModel.dart';
 import 'package:flutter/material.dart';
 
 class VisionCardDesk extends StatefulWidget {

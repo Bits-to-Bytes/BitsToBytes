@@ -1,10 +1,10 @@
-import 'package:bitstobytes/components/body/Body.dart';
-import 'package:bitstobytes/widgets/FloatingActionButton.dart';
 
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
+import 'components/body/Body.dart';
 import 'components/header/Header.dart';
+import 'widgets/FloatingActionButton.dart';
 
 class HomePage extends StatefulWidget {
   @override

@@ -1,11 +1,12 @@
-import 'package:bitstobytes/pages/EntryPage/EntryPage.dart';
-import 'package:bitstobytes/pages/OpportunityPage/OppertunityPage.dart';
-import 'package:bitstobytes/pages/TeamPage/TeamPage.dart';
-import 'package:bitstobytes/pages/contactPage/ContactPage.dart';
-import 'package:bitstobytes/pages/eventPage/evnetPage.dart';
-import 'package:bitstobytes/pages/techPage/TechPage.dart';
-import 'package:bitstobytes/pages/visionPage/visionPage.dart';
-import 'package:bitstobytes/providers/ScrollProvider.dart';
+
+import 'package:BitsToBytes/pages/EntryPage/EntryPage.dart';
+import 'package:BitsToBytes/pages/OpportunityPage/OppertunityPage.dart';
+import 'package:BitsToBytes/pages/TeamPage/TeamPage.dart';
+import 'package:BitsToBytes/pages/contactPage/ContactPage.dart';
+import 'package:BitsToBytes/pages/eventPage/evnetPage.dart';
+import 'package:BitsToBytes/pages/techPage/TechPage.dart';
+import 'package:BitsToBytes/pages/visionPage/visionPage.dart';
+import 'package:BitsToBytes/providers/ScrollProvider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

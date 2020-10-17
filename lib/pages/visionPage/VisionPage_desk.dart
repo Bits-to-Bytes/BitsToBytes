@@ -1,5 +1,6 @@
-import 'package:bitstobytes/providers/ScrollProvider.dart';
-import 'package:bitstobytes/widgets/visionPage/VisionCard.dart';
+
+import 'package:BitsToBytes/providers/ScrollProvider.dart';
+import 'package:BitsToBytes/widgets/visionPage/VisionCard.dart';
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';

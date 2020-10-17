@@ -1,7 +1,9 @@
-import 'package:bitstobytes/pages/visionPage/VisionPage_desk.dart';
-import 'package:bitstobytes/pages/visionPage/Visionpage_Mobile.dart';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import 'VisionPage_desk.dart';
+import 'Visionpage_Mobile.dart';
 
 class VisionPage extends StatefulWidget {
   @override

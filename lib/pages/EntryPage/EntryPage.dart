@@ -1,7 +1,9 @@
-import 'package:bitstobytes/pages/EntryPage/EntryPage_desk.dart';
-import 'package:bitstobytes/pages/EntryPage/EntryPage_mobile.dart';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import 'EntryPage_desk.dart';
+import 'EntryPage_mobile.dart';
 
 class EntryPage extends StatefulWidget {
   @override

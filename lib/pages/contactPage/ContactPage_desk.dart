@@ -1,5 +1,6 @@
-import 'package:bitstobytes/providers/ScrollProvider.dart';
-import 'package:bitstobytes/widgets/Buttons/SocialButton.dart';
+
+import 'package:BitsToBytes/providers/ScrollProvider.dart';
+import 'package:BitsToBytes/widgets/Buttons/SocialButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:get/get.dart';

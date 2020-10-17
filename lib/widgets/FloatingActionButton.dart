@@ -1,4 +1,5 @@
-import 'package:bitstobytes/providers/ScrollProvider.dart';
+
+import 'package:BitsToBytes/providers/ScrollProvider.dart';
 import 'package:floating_action_bubble/floating_action_bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
