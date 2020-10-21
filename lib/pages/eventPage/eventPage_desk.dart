@@ -1,4 +1,5 @@
 import 'package:BitsToBytes/providers/ScrollProvider.dart';
+import 'package:BitsToBytes/widgets/eventCard.dart';
 import 'package:lottie/lottie.dart';
 import 'package:url_launcher/url_launcher.dart' as url;
 
@@ -65,62 +66,28 @@ class _EventPageDesktopState extends State<EventPageDesktop> {
           SizedBox(
             height: 40.0,
           ),
-          Text(
-            "\"Launch Event\"",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 23),
+          // https://miten3377.typeform.com/to/z4e9Ib3n
+          EventCard(
+            image: "assets/events/1.jpeg",
+            isOdd: true,
+            link: "https://miten3377.typeform.com/to/z4e9Ib3n",
+            info:
+                "Throughout this event, you'll learn about Git's core functionality so you can understand how and why it’s used in organizations. We’ll look into some basic features, like Pull Request, branches and merging. We'll demonstrate how we can use git's command line tool to use Github's power very efficiently.",
+            title: "Intro to Git & GitHub",
           ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  offset: Offset(0, 2),
-                  blurRadius: 12,
-                  spreadRadius: 0,
-                  color: Colors.black.withOpacity(0.20),
-                )
-              ],
-            ),
-            height: 260,
-            width: 260,
-            child: Swiper(
-              controller: controller,
-              loop: true,
-              autoplay: true,
-              itemCount: 3,
-              itemBuilder: (_, index) => Container(
-                height: 260,
-                width: 260,
-                padding: const EdgeInsets.all(20),
-                alignment: Alignment.center,
-                child: Image.asset(event[index]),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text("The launch event of BitsToBytes programming club"),
-          SizedBox(
-            height: 20,
-          ),
-          AbsorbPointer(
-            child: MaterialButton(
-              onPressed: () {
-                url.launch(
-                    "https://www.youtube.com/channel/UC9gnf3MrWKz4yNFp2TXurkA");
-              },
-              color: Colors.red,
-              child: Text(
-                "Youtube",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-              ),
-            ),
-          ),
+          // AbsorbPointer(
+          //   child: MaterialButton(
+          //     onPressed: () {
+          //       url.launch(
+          //           "https://www.youtube.com/channel/UC9gnf3MrWKz4yNFp2TXurkA");
+          //     },
+          //     color: Colors.red,
+          //     child: Text(
+          //       "Youtube",
+          //       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

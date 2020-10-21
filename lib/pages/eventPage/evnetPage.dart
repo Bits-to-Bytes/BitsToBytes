@@ -1,4 +1,5 @@
 
+import 'package:BitsToBytes/pages/eventPage/eventPage_mobile.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -15,7 +16,7 @@ class _EventPageState extends State<EventPage> {
     return ScreenTypeLayout(
       desktop: EventPageDesktop(),
       tablet: EventPageDesktop(),
-      mobile: EventPageDesktop(),
+      mobile: EventpageMobile(),
     );
   }
 }
